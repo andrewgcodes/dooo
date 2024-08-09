@@ -1,5 +1,5 @@
 # Dooo
-![Dooo Logo](https://raw.githubusercontent.com/andrewgcodes/dooo/main/dooo.png)
+![Dooo Logo](https://github.com/andrewgcodes/dooo/blob/main/dooo.png?raw=true)
 
 Dooo is a Python package to make LLMs ridiculously easy to use. There is only one function with nearly no abstraction. You can't use Dooo for any conversational tasks requiring message history.
 
