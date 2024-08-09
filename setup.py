@@ -1,5 +1,8 @@
 from setuptools import setup, find_packages
 
+with open("README.md", "r", encoding="utf-8") as fh:
+    long_description = fh.read()
+
 setup(
     name="dooo",
     version="0.1.0",
@@ -12,7 +15,7 @@ setup(
         "scipy",
         "requests",
     ],
-    author="Andrew and William Gao",
+    author="Andrew Gao and William Gao",
     author_email="olafblitz@gmail.com",
     description="A Python package to make LLMs easy",
     long_description=open("README.md").read(),

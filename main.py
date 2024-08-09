@@ -1,5 +1,7 @@
 from dooo import set_api_key, set_default_model, do
 import os
+from dotenv import load_dotenv
+load_dotenv()
 
 # Set API key
 set_api_key('openai', os.environ['OPENAI_API_KEY'])

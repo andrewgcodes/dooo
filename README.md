@@ -1,6 +1,6 @@
 # Dooo
 
-Dooo is a Python package for AI-assisted data analysis and task execution.
+Dooo is a Python package to make LLMs easier to use. There is only one function with nearly no abstraction. You can't use Dooo for any conversational tasks requiring message history.
 
 ## Installation
 
@@ -20,7 +20,7 @@ from dooo import set_api_key, set_default_model, do
 # Set your API key
 set_api_key('openai', 'your-api-key-here')
 
-# Set the default model
+# Set the default model (GPT-4o is recommended, GPT-3.5-turbo is a bit too dumb)
 set_default_model('gpt-4o')
 
 # Perform a task
