@@ -1,0 +1,6 @@
+litellm
+numpy
+pandas
+matplotlib
+scipy
+requests

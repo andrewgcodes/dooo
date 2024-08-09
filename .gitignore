@@ -1,0 +1,21 @@
+# Virtual environment
+venv/
+
+# Python cache files
+__pycache__/
+*.pyc
+
+# Distribution / packaging
+dist/
+build/
+*.egg-info/
+
+# Environment variables
+.env
+
+# VSCode settings
+.vscode/
+
+# Operating system files
+.DS_Store
+Thumbs.db
