@@ -1,6 +1,8 @@
 # Dooo
 ![Dooo Logo](https://github.com/andrewgcodes/dooo/blob/main/dooo.png?raw=true)
 
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/162I3A7f1RIM4d_tgEIix-yOQE25ZmQNb?usp=sharing)
+
 Dooo is a Python package to make LLMs ridiculously easy to use. There is only one function with nearly no abstraction. You can't use Dooo for any conversational tasks requiring message history.
 
 Dooo is for fun, but might be somewhat useful.
