@@ -33,7 +33,7 @@ class Dooo:
 
             if requires_coding:
                 code = self._generate_python_code(data_or_prompt, task, model)
-                result = self._execute_code(code, data_or_prompt)
+                result = execute_code(code, data_or_prompt)
             else:
                 raw_result = self._perform_task(data_or_prompt, task, model)
                 result = self._extract_answer(raw_result, task, model)
