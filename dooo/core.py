@@ -19,21 +19,30 @@ class Dooo:
         else:
             raise ValueError(f"Unsupported provider: {provider}")
 
-    def do(self, data, task, model=None):
+    def do(self, data_or_prompt, task=None, model=None):
         model = model or self.default_model
         if model is None:
             raise ValueError("No model specified. Set a default model or provide one.")
 
-        requires_coding = self._determine_if_coding_required(task, model)
-
-        if requires_coding:
-            code = self._generate_python_code(data, task, model)
-            result = execute_code(code, data)
+        if task is None:
+            # If only one argument is provided, treat it as a prompt
+            return self._perform_task(None, data_or_prompt, model)
         else:
-            raw_result = self._perform_task(data, task, model)
-            result = self._extract_answer(raw_result, task, model)
+            # If two arguments are provided, treat them as data and task
+            requires_coding = self._determine_if_coding_required(task, model)
 
-        return result
+            if requires_coding:
+                code = self._generate_python_code(data_or_prompt, task, model)
+                result = self._execute_code(code, data_or_prompt)
+            else:
+                raw_result = self._perform_task(data_or_prompt, task, model)
+                result = self._extract_answer(raw_result, task, model)
+
+            return result
+
+    def _perform_task(self, data, task, model):
+        prompt = task if data is None else f"Perform the following task:\nTask: {task}\nData: {data}\nProvide a direct and concise answer."
+        return self._make_llm_call(prompt, model)
 
     def _determine_if_coding_required(self, task, model):
         prompt = f"Does the following task require writing Python code to solve? Answer with 'Yes' or 'No':\n\nTask: {task}"
