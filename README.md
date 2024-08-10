@@ -1,11 +1,13 @@
 # Dooo
-![Dooo Logo](https://github.com/andrewgcodes/dooo/blob/main/dooo.png?raw=true)
+<img src="https://github.com/andrewgcodes/dooo/raw/main/dooo.png" alt="Dooo Logo" width="200"/>
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/162I3A7f1RIM4d_tgEIix-yOQE25ZmQNb?usp=sharing)
 
-Dooo is a Python package to make LLMs ridiculously easy to use. There is only one function with nearly no abstraction. You can't use Dooo for any conversational tasks requiring message history.
+Dooo makes LLMs ridiculously easy to use. There is **only one function**, do(), with nearly no abstraction. Thanks to litellm integration, do() is compatible with 100s of LLMs, including OpenAI and Anthropic's, by just changing the model name!
 
-Dooo is for fun, but might be somewhat useful.
+You shouldn't use Dooo for any conversational tasks requiring message history. Try LangChain for that.
+Dooo is for fun, but might be somewhat useful!
+
 ## Installation
 
 You can install Dooo using pip:
