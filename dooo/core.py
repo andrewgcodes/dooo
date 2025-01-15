@@ -14,7 +14,9 @@ class Dooo:
 
     def set_api_key(self, provider, key):
         provider = provider.lower()
-        if provider in ['openai', 'anthropic', 'huggingface', 'openrouter']:
+        if provider == 'google':
+            os.environ["GOOGLE_API_KEY"] = key
+        elif provider in ['openai', 'anthropic', 'huggingface', 'openrouter']:
             os.environ[f"{provider.upper()}_API_KEY"] = key
         else:
             raise ValueError(f"Unsupported provider: {provider}")
